@@ -9,14 +9,15 @@ std::vector<note> &notes; // type,time,lane,id
 int index;
 std::vector<note> drawing;
 std::vector<note> specials;
-int top_to_judge,balls; //上から判定まで届くのにかかる時間、上から判定までの球の数
+int top_to_judge,
+    lights_num; //上から判定まで届くのにかかる時間、上から判定までの球の数
 void init(int _speed, std::vector<note> &_notes) {
     notes = _notes;
     speed = _speed;
     index = 0;
     drawing.clear();
     specials.clear();
-    top_to_judge = speed * balls; //計算式あってるか不確か
+    top_to_judge = speed * lights_num; //計算式あってるか不確か
 }
 
 void update(unsigned long nowTick) {
